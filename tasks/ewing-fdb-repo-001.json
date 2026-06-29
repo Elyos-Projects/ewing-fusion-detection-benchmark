@@ -1,0 +1,33 @@
+{
+  "id": "ewing-fdb-repo-001",
+  "title": "Initialise repo, licenses, CONTRIBUTING, and compliance README",
+  "project": "ewing-fusion-detection-benchmark",
+  "type": "maintenance",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer-research", "bioinformatics", "ewing-sarcoma", "reproducibility"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "Cold-start (M0) for the EWSR1-fusion detection benchmark. No open, reproducible, Ewing-Sarcoma-specific fusion-caller benchmark exists. Before any data or code, the repo must encode the binding cancer guardrails: open-access/aggregate/de-identified/simulated data ONLY; controlled-access (dbGaP, EGA, TARGET/TCGA controlled tiers, biobanks) and identifiable patient data are OUT OF SCOPE; COSMIC/OncoKB are non-commercial and reference-only; no medical advice; provenance on every assertion. No partner is yet secured.",
+  "objective": "Create the public repository skeleton with dual licensing (MIT for code, CC-BY-4.0 for docs/datasheets), a CONTRIBUTING guide, a CITATION stub, and a compliance README that states the data-source guardrails and the refuse-and-flag rule, so all later work inherits the constraints.",
+  "acceptanceCriteria": [
+    "Repo created with LICENSE (MIT) and LICENSES/CC-BY-4.0 for docs/data; README states scope and the 'not a diagnostic device / not medical advice' disclaimer.",
+    "CONTRIBUTING.md describes the donated-lane flow, DCO sign-off (git commit -s), and the review/expert sign-off gates.",
+    "Compliance README lists controlled-access sources as OUT OF SCOPE and flags COSMIC/OncoKB as non-commercial reference-only, with the refuse-and-flag rule.",
+    "No secrets, tokens, controlled-access data, or re-hosted flagged data are present in the repo.",
+    "Reviewed and signed off by the maintainer and the compliance reviewer."
+  ],
+  "resources": [
+    "C:/code/elyos/CLAUDE.md",
+    "C:/code/elyos/docs/good-deed-definition.md",
+    "C:/code/elyos/planning/ROADMAP.md (Track 8 cancer guardrails)",
+    "PLAN.md (sections 7 and 8)"
+  ],
+  "output": "A pull request adding the repository skeleton: MIT + CC-BY-4.0 licenses, README, CONTRIBUTING.md, CITATION.cff stub, and compliance README encoding the cancer data guardrails.",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}
