@@ -1,0 +1,31 @@
+{
+  "id": "ewing-fdb-compliance-002",
+  "title": "Write data-source compliance policy (open-only; controlled-access exclusion; COSMIC/OncoKB flagged)",
+  "project": "ewing-fusion-detection-benchmark",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer-research", "bioinformatics", "ewing-sarcoma", "compliance", "data-governance"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "M0 governance task for the EWSR1-fusion detection benchmark. This policy is the binding data guardrail every downstream task inherits: open-access/aggregate/de-identified/simulated data ONLY; controlled-access and identifiable patient data are refused-and-flagged, not scheduled. It must be written before any data curation so the CI license gate and all curators have an authoritative reference. No partner is yet secured (verifiedNeed=false).",
+  "objective": "Author the data-source compliance policy document defining in-scope vs out-of-scope sources, the refuse-and-flag rule, per-source license record fields, and the re-identifiability check gate that the CI license gate references.",
+  "acceptanceCriteria": [
+    "Policy explicitly lists dbGaP, EGA, TARGET/TCGA controlled tiers, and individual-level biobanks as out of scope, with the refuse-and-flag rule.",
+    "TCGA/GDC open-tier and GEO documented as open; COSMIC and OncoKB documented as non-commercial/custom and reference-only, never redistributed/depended-on.",
+    "Defines the per-source license record fields and the re-identifiability check gate.",
+    "Reviewed by compliance reviewer and domain expert; CI license gate references it."
+  ],
+  "resources": [
+    "PLAN.md (sections 7 and 8)",
+    "C:/code/elyos/CLAUDE.md",
+    "tasks/ewing-fdb-repo-001.json"
+  ],
+  "output": "docs/COMPLIANCE.md — the data-source compliance policy referenced by the CI license/provenance gate.",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

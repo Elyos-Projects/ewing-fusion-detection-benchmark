@@ -1,0 +1,30 @@
+{
+  "id": "ewing-fdb-report-203",
+  "title": "Leaderboard + results report v0 (per-stratum, CIs, runtime/memory)",
+  "project": "ewing-fusion-detection-benchmark",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer-research", "bioinformatics", "ewing-sarcoma", "benchmarking", "documentation"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "M2 results report v0 for the EWSR1-fusion detection benchmark. Presents the leaderboard stratified by difficulty and partner, with every number carrying a CI, n, and provenance link, plus runtime/memory. Honesty guardrails apply: no single winner is declared - only trade-offs and a limitations section. Built on simulated data; emits no clinical/patient-facing claim.",
+  "objective": "Produce leaderboard + results report v0 stratified by difficulty and partner, with CI + n + provenance on every number, resource usage, a limitations section, and no declared winner.",
+  "acceptanceCriteria": [
+    "Leaderboard stratified by difficulty + partner; every number has CI + n + provenance link.",
+    "Includes a limitations section; no single 'winner' declared (trade-offs only).",
+    "Runtime and peak memory reported per caller.",
+    "Reviewed by expert + maint."
+  ],
+  "resources": [
+    "tasks/ewing-fdb-harness-202.json",
+    "tasks/ewing-fdb-score-103.json"
+  ],
+  "output": "docs/reports/leaderboard-v0.md — stratified leaderboard + results report v0.",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

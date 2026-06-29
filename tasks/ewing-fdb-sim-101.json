@@ -1,0 +1,31 @@
+{
+  "id": "ewing-fdb-sim-101",
+  "title": "Simulate EWSR1 fusions across partners (FLI1/ERG/ETV1/ETV4/FEV) + breakpoint variants",
+  "project": "ewing-fusion-detection-benchmark",
+  "type": "data",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer-research", "bioinformatics", "ewing-sarcoma", "data-simulation"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "M1 truth-set construction for the EWSR1-fusion detection benchmark. Builds the simulated positive set spanning the five canonical ES partners (FLI1, ERG, ETV1, ETV4, FEV) with documented breakpoint variants. All data is simulated (open/CC-licensed) per the guardrails; domain-expert review confirms the partner/breakpoint biology is plausible. This is the backbone the scoring library and full benchmark run against.",
+  "objective": "Generate a >=200-case simulated truth set across the five ES partners with breakpoint variants, each case carrying a machine-readable ground-truth manifest and recorded provenance.",
+  "acceptanceCriteria": [
+    ">=200 simulated cases spanning the five ES partners with documented breakpoints.",
+    "Each case has a machine-readable ground-truth manifest (genes, exact breakpoints, support counts, spike fraction); license CC-BY-4.0/CC0; provenance recorded.",
+    "Domain expert confirms partner/breakpoint biology is plausible.",
+    "Reviewed by bio-rev + expert."
+  ],
+  "resources": [
+    "tasks/ewing-fdb-sim-004.json",
+    "tasks/ewing-fdb-schema-003.json",
+    "PLAN.md (section 6.2)"
+  ],
+  "output": "data/sim/truthset-v1/ — >=200-case multi-partner simulated truth set with per-case ground-truth manifests.",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

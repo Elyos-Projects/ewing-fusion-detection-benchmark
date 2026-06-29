@@ -1,0 +1,31 @@
+{
+  "id": "ewing-fdb-specificity-303",
+  "title": "Run callers on real + confounder panel; report sensitivity + specificity",
+  "project": "ewing-fusion-detection-benchmark",
+  "type": "code",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer-research", "bioinformatics", "ewing-sarcoma", "benchmarking"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "M3 specificity evaluation for the EWSR1-fusion detection benchmark. Runs all callers over the curated real positives and the confounder panel to report sensitivity alongside specificity - the project's check that callers do not mislabel non-ES EWSR1 look-alikes as ES fusions. Uses accession-fetched open data only, with full provenance and CI-bounded metrics; no patient-facing claim is produced.",
+  "objective": "Run the caller harness over the real positives + confounder panel and report sensitivity and specificity with CI + n + provenance per stratum.",
+  "acceptanceCriteria": [
+    "All callers run on the real positives + confounder panel via the existing harness with complete provenance.",
+    "Sensitivity and specificity reported per stratum with CI + n (via the scoring library).",
+    "Confounder false-positives (non-ES EWSR1 calls) reported explicitly.",
+    "Reviewed by bio-rev + expert."
+  ],
+  "resources": [
+    "tasks/ewing-fdb-confounder-302.json",
+    "tasks/ewing-fdb-realdata-301.json",
+    "tasks/ewing-fdb-harness-202.json"
+  ],
+  "output": "A pull request adding the specificity run + output/specificity-report with sensitivity/specificity metrics.",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

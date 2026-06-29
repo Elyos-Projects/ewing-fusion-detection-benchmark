@@ -1,0 +1,30 @@
+{
+  "id": "ewing-fdb-realdata-301",
+  "title": "Curate open/cell-line ES RNA-seq positives (accessions + evidence + license)",
+  "project": "ewing-fusion-detection-benchmark",
+  "type": "research",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer-research", "bioinformatics", "ewing-sarcoma", "data-curation", "compliance"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "M3 real-data curation for the EWSR1-fusion detection benchmark. Curates open/cell-line ES RNA-seq positives as accessions + fetch recipes only - never re-hosting reads unless a license clearly permits - per the binding open-data guardrail. Each entry carries citation, evidence-strength, license, and a re-identifiability check; a compliance reviewer confirms no controlled-access or identifiable data is included.",
+  "objective": "Curate >=10 open/cell-line ES RNA-seq positives as accessions + fetch recipe, each with citation, evidence-strength, license, and a passed re-identifiability check, compliance-confirmed.",
+  "acceptanceCriteria": [
+    ">=10 cell-line/open positives recorded as accessions + fetch recipe (no re-hosting unless license clearly permits); each with citation + evidence-strength + license + re-identifiability check = pass.",
+    "Compliance reviewer confirms no controlled-access/identifiable data.",
+    "Reviewed by bio-rev + expert + comp."
+  ],
+  "resources": [
+    "tasks/ewing-fdb-compliance-002.json",
+    "tasks/ewing-fdb-harness-202.json",
+    "PLAN.md (section 7)"
+  ],
+  "output": "data/real/positives-accessions.tsv — accession + fetch-recipe + license records for open/cell-line ES positives (no re-hosted reads).",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

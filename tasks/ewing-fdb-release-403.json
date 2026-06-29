@@ -1,0 +1,29 @@
+{
+  "id": "ewing-fdb-release-403",
+  "title": "CITATION.cff + Zenodo DOI + archived reproducible release",
+  "project": "ewing-fusion-detection-benchmark",
+  "type": "maintenance",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer-research", "bioinformatics", "ewing-sarcoma", "reproducibility", "release"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "M4 citable release for the EWSR1-fusion detection benchmark. Produces a CITATION.cff and a Zenodo-DOI-archived, reproducible tagged release so the work is citable and old releases remain reproducible from pinned inputs. This is pure release maintenance (riskTier low) over open/simulated artefacts; no patient data is involved.",
+  "objective": "Add CITATION.cff and produce a DOI-archived reproducible tagged release whose pinned inputs keep older releases reproducible.",
+  "acceptanceCriteria": [
+    "Tagged release archived with DOI; old releases remain reproducible from pinned inputs.",
+    "CITATION.cff present and valid; release notes link the provenance ledger and report v1.0.",
+    "Reviewed by maint."
+  ],
+  "resources": [
+    "tasks/ewing-fdb-report-402.json",
+    "tasks/ewing-fdb-repro-304.json"
+  ],
+  "output": "A pull request adding CITATION.cff + release tooling for the Zenodo-DOI-archived reproducible release.",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "ewing-fdb-viz-604",
+  "title": "Interactive leaderboard explorer (static site)",
+  "project": "ewing-fusion-detection-benchmark",
+  "type": "code",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["cancer-research", "bioinformatics", "ewing-sarcoma", "visualization", "frontend"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Backlog (unscheduled) UX task for the EWSR1-fusion detection benchmark. Builds a static-site interactive leaderboard explorer so researchers can filter results by partner and difficulty stratum. It surfaces only the public, provenance-bound benchmark numbers (CI + n) and contains no PII. Honesty guardrails carry over: it shows trade-offs, not a single winner.",
+  "objective": "Build a static-site interactive leaderboard explorer over the public benchmark results, filterable by partner and difficulty, with no PII and every number showing CI + n.",
+  "acceptanceCriteria": [
+    "Static site renders the leaderboard filterable by partner and difficulty stratum, sourced from the provenance-bound results.",
+    "Every displayed number carries CI + n; no winner is declared; no PII is present.",
+    "Reviewed by maint."
+  ],
+  "resources": [
+    "tasks/ewing-fdb-report-203.json",
+    "tasks/ewing-fdb-harness-202.json"
+  ],
+  "output": "A pull request adding site/ — a static interactive leaderboard explorer.",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

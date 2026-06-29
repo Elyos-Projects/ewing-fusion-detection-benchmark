@@ -1,0 +1,29 @@
+{
+  "id": "ewing-fdb-contrib-501",
+  "title": "\"Add/update a caller\" contributor guide + template (proven by >=1 external PR)",
+  "project": "ewing-fusion-detection-benchmark",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["cancer-research", "bioinformatics", "ewing-sarcoma", "documentation", "community"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "M5 sustainability task for the EWSR1-fusion detection benchmark. Documents the adapter contract and provides a template so the community can add or update callers, with success proven by at least one external contributor PR landing a new caller. A working community contribution path is how the benchmark stays current after the core team's work. Pure documentation over open artefacts (riskTier low).",
+  "objective": "Write the 'add/update a caller' contributor guide + template documenting the adapter contract, proven by >=1 external contributor landing a new caller via it.",
+  "acceptanceCriteria": [
+    "Documented adapter contract + template; >=1 external contributor lands a new caller via it.",
+    "Guide covers the canonical FusionCall output, container pinning, and the CI smoke-test requirement.",
+    "Reviewed by maint + bio-rev."
+  ],
+  "resources": [
+    "tasks/ewing-fdb-callers-201.json",
+    "tasks/ewing-fdb-release-403.json"
+  ],
+  "output": "docs/CONTRIBUTING-callers.md + caller adapter template proven by an external PR.",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

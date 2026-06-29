@@ -1,0 +1,29 @@
+{
+  "id": "ewing-fdb-newcaller-603",
+  "title": "Add emerging callers as they release",
+  "project": "ewing-fusion-detection-benchmark",
+  "type": "maintenance",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["cancer-research", "bioinformatics", "ewing-sarcoma", "benchmarking", "maintenance"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Backlog (unscheduled) maintenance task for the EWSR1-fusion detection benchmark on a quarterly refresh cadence. As new fusion callers release, they are added behind the uniform adapter and re-benchmarked so the leaderboard stays current. This is a representative recurring task - the concrete caller set expands as tools are released. Operates on simulated/open data with full provenance.",
+  "objective": "Add an emerging fusion caller behind the uniform adapter and re-run the benchmark, as part of the quarterly refresh cadence (representative recurring task).",
+  "acceptanceCriteria": [
+    "The new caller is pinned by container digest behind the uniform adapter and emits the canonical FusionCall.",
+    "Benchmark re-run includes the new caller with CI + n + provenance; leaderboard updated.",
+    "CI smoke test passes for the new caller; reviewed by bio-rev/maint."
+  ],
+  "resources": [
+    "tasks/ewing-fdb-callers-201.json",
+    "tasks/ewing-fdb-contrib-501.json"
+  ],
+  "output": "A pull request adding an emerging caller adapter + refreshed benchmark results (representative; recurs quarterly).",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

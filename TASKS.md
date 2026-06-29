@@ -290,11 +290,80 @@ with documented rationale; maintenance plan ratified.
 ## Backlog totals
 
 - **Milestones:** 6 (M0–M5).
-- **Scheduled tasks:** 22 across M0–M5.
+- **Scheduled tasks:** 24 across M0–M5 (M0:6, M1:4, M2:4, M3:4, M4:3, M5:3).
 - **Backlog (unscheduled):** 5.
-- **Total tasks:** 27.
+- **Total tasks:** 29 — one executable `tasks/<id>.json` per row (see *Generated task index* below).
 - **Risk:** all `low`/`medium`; **no `high` tasks scheduled** — any patient-facing artefact is
   gated behind oncologist + patient-advocate sign-off (PLAN §8) and out of this backlog.
 - **`verifiedNeed`:** `false` on every task until a partner/steward is secured (PLAN §2/§11).
-- **Funded tasks:** none scheduled; `ewing-fdb-fullsweep-602` is funded-lane and requires a
-  `fundedBudgetUsd` hard cap if activated.
+- **Funded tasks:** none scheduled; `ewing-fdb-fullsweep-602` is funded-lane and carries a
+  `fundedBudgetUsd` hard cap (conservative default $500; PLAN §15 — adjust to escrow on activation).
+
+> **Count correction (task decomposition):** an earlier draft of this footer read "22 scheduled /
+> 27 total"; the M0–M5 milestone tables actually enumerate **24** scheduled rows, so the true total
+> is **29** (24 + 5 backlog). Corrected here to match the generated `tasks/*.json` set.
+
+---
+
+## Acceptance criteria (rows previously without an explicit block)
+
+These rows had no dedicated acceptance-criteria block above; criteria below were authored during
+task decomposition and are mirrored verbatim in each row's `tasks/<id>.json`.
+
+- **ewing-fdb-sim-004** — One simulated EWSR1-FLI1 sample with reads + a machine-readable
+  ground-truth manifest conforming to `schema-003`; license CC-BY-4.0/CC0; method + seed recorded
+  (reproducible); provenance recorded (no patient data); reviewed by bio-rev.
+- **ewing-fdb-ci-006** — CI runs the smoke benchmark on every PR and fails on regression; the
+  license/provenance gate references `docs/COMPLIANCE.md` and blocks controlled-access/flagged data
+  and unprovenanced results; pinned digests verified; no secrets in logs; reviewed by maint.
+- **ewing-fdb-sim-102** — Each difficulty axis (depth, tumour-purity spike-in, FFPE-like
+  degradation) parameterised and labelled per case; strata recorded in manifests for n-per-stratum
+  scoring; realism assumptions documented; CC-BY-4.0/CC0 + provenance; reviewed by bio-rev + expert.
+- **ewing-fdb-toolcards-204** — One tool card per benchmarked caller (config, failure modes, trust
+  boundaries), grounded in provenance-linked benchmark runs, avoiding clinical recommendation;
+  reviewed by expert.
+- **ewing-fdb-specificity-303** — All callers run over real positives + confounder panel with full
+  provenance; sensitivity **and** specificity reported per stratum with CI + n; confounder
+  false-positives reported explicitly; reviewed by bio-rev + expert.
+- **ewing-fdb-robust-401** — Failure analysis across FFPE/low-input/low-purity strata with per-stratum
+  CI + n; each finding provenance-linked; limitations stated; no winner declared; reviewed by
+  expert + bio-rev.
+- **ewing-fdb-longread-601** — Long-read (ONT/PacBio) simulated cases with manifests conforming to
+  `schema-003`; simulator + realism limits documented; CC-BY-4.0/CC0 + provenance; bio-rev + expert.
+- **ewing-fdb-fullsweep-602** *(funded)* — Full sweep over simulated/open data with complete
+  per-cell provenance; spend never exceeds `fundedBudgetUsd`; public cost-ledger entry; no
+  secrets/keys in logs/receipts/commits; reviewed by bio-rev + maint.
+- **ewing-fdb-newcaller-603** — New caller pinned by digest behind the uniform adapter, emitting the
+  canonical `FusionCall`; benchmark re-run with CI + n + provenance; leaderboard updated; CI smoke
+  passes; reviewed by bio-rev/maint. *(Representative; recurs quarterly.)*
+- **ewing-fdb-viz-604** — Static site renders the leaderboard filterable by partner + difficulty from
+  provenance-bound results; every number shows CI + n; no winner declared; no PII; reviewed by maint.
+- **ewing-fdb-crosslink-605** — Datasheets/accession records linked both ways to
+  `ewing-open-data-catalog` entries via stable IDs; only open licensed accession-level metadata
+  shared (no controlled-access/re-hosted data); provenance recorded; reviewed by maint.
+
+---
+
+## Generated task index
+
+Each milestone/backlog row maps to exactly one executable `tasks/<id>.json` (validated against the
+Elyos taskSchema). **Fan-out:** none — one JSON per enumerated row. Named sets that appear inside a
+single row (the five ES partners FLI1/ERG/ETV1/ETV4/FEV in `sim-101`; the six callers in
+`callers-201`; the per-caller tool cards in `toolcards-204`) are **single integrated deliverables**
+per their own acceptance criteria, not repeatable templates, so they are intentionally **not**
+expanded into per-item tasks. Open-ended dimensions (real-data accessions, emerging callers) remain
+representative tasks that expand on partner/scope confirmation.
+
+| Milestone | Task JSON ids |
+|---|---|
+| M0 | `ewing-fdb-repo-001` (seed), `ewing-fdb-compliance-002`, `ewing-fdb-schema-003`, `ewing-fdb-sim-004`, `ewing-fdb-harness-005`, `ewing-fdb-ci-006` |
+| M1 | `ewing-fdb-sim-101`, `ewing-fdb-sim-102`, `ewing-fdb-score-103`, `ewing-fdb-datasheet-104` |
+| M2 | `ewing-fdb-callers-201`, `ewing-fdb-harness-202`, `ewing-fdb-report-203`, `ewing-fdb-toolcards-204` |
+| M3 | `ewing-fdb-realdata-301`, `ewing-fdb-confounder-302`, `ewing-fdb-specificity-303`, `ewing-fdb-repro-304` |
+| M4 | `ewing-fdb-robust-401`, `ewing-fdb-report-402`, `ewing-fdb-release-403` |
+| M5 | `ewing-fdb-contrib-501`, `ewing-fdb-adoption-502`, `ewing-fdb-dnasv-503` |
+| Backlog | `ewing-fdb-longread-601`, `ewing-fdb-fullsweep-602` *(funded)*, `ewing-fdb-newcaller-603`, `ewing-fdb-viz-604`, `ewing-fdb-crosslink-605` |
+
+**Total:** 29 task JSONs (1 pre-existing seed + 28 generated). Validation: all pass
+(`filename == id`, no duplicates, no extra keys). No `high`-risk or patient-facing tasks were
+authored; no refused-content tasks were created.

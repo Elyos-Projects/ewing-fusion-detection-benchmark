@@ -1,0 +1,30 @@
+{
+  "id": "ewing-fdb-robust-401",
+  "title": "Robustness deep-dive: FFPE/low-input/low-purity failure analysis",
+  "project": "ewing-fusion-detection-benchmark",
+  "type": "research",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer-research", "bioinformatics", "ewing-sarcoma", "benchmarking"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "M4 robustness analysis for the EWSR1-fusion detection benchmark. Drills into where and why callers fail under FFPE-like degradation, low input, and low tumour purity, using the stratified results. The aim is honest characterisation of failure modes (not a winner), so users understand the limits of each tool. Built on simulated/open data with full provenance; no clinical claim is made.",
+  "objective": "Produce a robustness deep-dive analysing caller failure modes across FFPE/low-input/low-purity strata, with CI-bounded evidence and provenance links.",
+  "acceptanceCriteria": [
+    "Failure analysis covers FFPE-like degradation, low-input, and low-purity strata with per-stratum CI + n.",
+    "Each finding is provenance-linked to benchmark runs; limitations stated; no winner declared.",
+    "Reviewed by expert + bio-rev."
+  ],
+  "resources": [
+    "tasks/ewing-fdb-specificity-303.json",
+    "tasks/ewing-fdb-report-203.json",
+    "tasks/ewing-fdb-sim-102.json"
+  ],
+  "output": "docs/reports/robustness-deep-dive.md — FFPE/low-input/low-purity failure analysis.",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "ewing-fdb-dnasv-503",
+  "title": "(Conditional) DNA structural-variant track (Manta/GRIDSS/SvABA) if open data exists",
+  "project": "ewing-fusion-detection-benchmark",
+  "type": "code",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["cancer-research", "bioinformatics", "ewing-sarcoma", "structural-variants", "benchmarking"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "M5 conditional DNA structural-variant track for the EWSR1-fusion detection benchmark. Adds DNA-SV callers (Manta, GRIDSS, SvABA) ONLY if redistributable/open ES WGS/WES with documented fusions exists and compliance confirms it; otherwise the track is formally deferred with documented rationale. The open-data and compliance guardrails strictly gate this work - no controlled-access WGS is used.",
+  "objective": "Add a DNA-SV caller track (Manta/GRIDSS/SvABA) gated on compliance-confirmed open ES WGS/WES with documented fusions, or formally defer with a documented rationale.",
+  "acceptanceCriteria": [
+    "Only proceeds if redistributable/open ES WGS/WES with documented fusions exists (compliance-confirmed); otherwise formally deferred with rationale.",
+    "If built: DNA-SV callers run behind the uniform adapter on the pinned reference with full provenance and CI smoke tests.",
+    "Reviewed by bio-rev + comp."
+  ],
+  "resources": [
+    "tasks/ewing-fdb-compliance-002.json",
+    "tasks/ewing-fdb-callers-201.json",
+    "PLAN.md (section 7)"
+  ],
+  "output": "A pull request adding the DNA-SV track (dna-sv/) or a documented deferral rationale.",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}
