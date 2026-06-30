@@ -1,0 +1,30 @@
+{
+  "id": "ewing-fdb-callers-201",
+  "title": "Containerise + adapt 6 callers (STAR-Fusion, Arriba, FusionCatcher, JAFFA, deFuse, pizzly)",
+  "project": "ewing-fusion-detection-benchmark",
+  "type": "code",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer-research", "bioinformatics", "ewing-sarcoma", "containers", "benchmarking"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "M2 multi-caller integration for the EWSR1-fusion detection benchmark. Containerises the six named fusion callers (STAR-Fusion, Arriba, FusionCatcher, JAFFA, deFuse, pizzly) behind one uniform run(...) -> normalized_calls adapter so every caller is benchmarked identically on the same pinned GRCh38 reference. Pinning by container digest is the reproducibility guarantee; no patient data is used.",
+  "objective": "Containerise and adapt the six named callers behind the uniform adapter so each emits the canonical FusionCall on the single pinned GRCh38 reference, with a CI smoke test per caller.",
+  "acceptanceCriteria": [
+    ">=6 callers pinned by container digest behind the uniform run(...)->normalized_calls adapter; each emits the canonical FusionCall.",
+    "All use the single pinned GRCh38 reference + annotation (no GRCh37).",
+    "Smoke test passes for each caller in CI.",
+    "Reviewed by bio-rev + maint."
+  ],
+  "resources": [
+    "tasks/ewing-fdb-schema-003.json",
+    "tasks/ewing-fdb-harness-005.json"
+  ],
+  "output": "A pull request adding callers/ adapters + pinned container definitions for the six callers behind the uniform adapter.",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

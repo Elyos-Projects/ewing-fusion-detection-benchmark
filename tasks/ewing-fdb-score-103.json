@@ -1,0 +1,30 @@
+{
+  "id": "ewing-fdb-score-103",
+  "title": "Scoring library: precision/recall/F1, breakpoint distance, partner-resolution, CIs",
+  "project": "ewing-fusion-detection-benchmark",
+  "type": "code",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer-research", "bioinformatics", "ewing-sarcoma", "benchmarking", "statistics"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "M1 scoring library for the EWSR1-fusion detection benchmark. Implements the versioned match rule (matchrule-v1) and computes precision/recall/F1, breakpoint distance, partner-resolution, and bootstrap confidence intervals. The integrity rule of the project - no point estimate without a CI and n - is enforced here by tests. Operates only on simulated/open data; emits no patient-facing claim.",
+  "objective": "Ship a tested scoring library implementing matchrule-v1 that reports F1, breakpoint distance, separate partner-resolution, n-per-stratum, and bootstrap CIs, refusing to emit any point estimate without CI + n.",
+  "acceptanceCriteria": [
+    "Implements the versioned match rule; partner-resolution scored separately from F1.",
+    "Reports n-per-stratum and bootstrap confidence intervals; unit tests cover edge cases (no-call, multi-call, off-by-tolerance breakpoints).",
+    "No point estimate emitted without CI + n (enforced by tests).",
+    "Reviewed by bio-rev."
+  ],
+  "resources": [
+    "tasks/ewing-fdb-schema-003.json",
+    "tasks/ewing-fdb-sim-102.json"
+  ],
+  "output": "A pull request adding the scoring library (src/scoring/) implementing matchrule-v1 with CI-bounded metrics and tests.",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

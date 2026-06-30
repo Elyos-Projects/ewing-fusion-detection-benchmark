@@ -1,0 +1,29 @@
+{
+  "id": "ewing-fdb-toolcards-204",
+  "title": "Per-caller tool cards (config, failure modes, trust boundaries)",
+  "project": "ewing-fusion-detection-benchmark",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer-research", "bioinformatics", "ewing-sarcoma", "documentation"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "M2 tool cards for the EWSR1-fusion detection benchmark. Each card documents one caller's configuration, observed failure modes, and trust boundaries so users interpret leaderboard results responsibly rather than treating any caller as a black-box oracle. Grounded in the benchmark's own runs on simulated data; no clinical recommendation is made.",
+  "objective": "Author a per-caller tool card for each benchmarked caller covering configuration, failure modes, and trust boundaries, grounded in the harness-202 results.",
+  "acceptanceCriteria": [
+    "One tool card per benchmarked caller documents configuration/parameters used, observed failure modes, and trust boundaries.",
+    "Claims are grounded in benchmark runs (provenance-linked) and avoid clinical recommendation.",
+    "Reviewed by expert."
+  ],
+  "resources": [
+    "tasks/ewing-fdb-report-203.json",
+    "tasks/ewing-fdb-callers-201.json"
+  ],
+  "output": "docs/toolcards/ — one tool card per benchmarked caller (config, failure modes, trust boundaries).",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

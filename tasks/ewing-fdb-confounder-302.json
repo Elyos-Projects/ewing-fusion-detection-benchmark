@@ -1,0 +1,30 @@
+{
+  "id": "ewing-fdb-confounder-302",
+  "title": "Curate non-ES EWSR1 look-alike + fusion-negative confounder panel",
+  "project": "ewing-fusion-detection-benchmark",
+  "type": "research",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer-research", "bioinformatics", "ewing-sarcoma", "data-curation", "compliance"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "M3 specificity confounder panel for the EWSR1-fusion detection benchmark. Curates non-ES EWSR1 look-alike fusions (e.g. EWSR1-WT1, EWSR1-NR4A3, EWSR1-ATF1/CREB1) and fusion-negative samples so the benchmark can measure specificity, not just sensitivity. Distinguishing these from true ES fusions is diagnostically important. All entries are open/accession-only with license records; compliance gate applies (no controlled-access/identifiable data).",
+  "objective": "Curate a confounder panel of non-ES EWSR1 fusions and fusion-negative samples as licensed accessions, documenting the diagnostic importance of distinguishing them from ES fusions.",
+  "acceptanceCriteria": [
+    "Includes non-ES EWSR1 fusions (e.g. EWSR1-WT1, EWSR1-NR4A3, EWSR1-ATF1/CREB1) and fusion-negative samples; each sourced + licensed.",
+    "Documents the diagnostic importance of distinguishing these from ES fusions.",
+    "Recorded as accessions + fetch recipe with re-identifiability check = pass; compliance reviewer confirms no controlled-access/identifiable data.",
+    "Reviewed by expert + comp."
+  ],
+  "resources": [
+    "tasks/ewing-fdb-realdata-301.json",
+    "tasks/ewing-fdb-compliance-002.json"
+  ],
+  "output": "data/confounders/panel.tsv — non-ES EWSR1 look-alike + fusion-negative confounder accession/license records.",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "ewing-fdb-sim-004",
+  "title": "Simulate one EWSR1-FLI1 RNA-seq sample with ground-truth breakpoints",
+  "project": "ewing-fusion-detection-benchmark",
+  "type": "data",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer-research", "bioinformatics", "ewing-sarcoma", "data-simulation"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "M0 data task for the EWSR1-fusion detection benchmark: produce the first end-to-end-usable simulated sample so the smoke harness has real input. The sample is fully simulated (no patient data) with documented ground-truth breakpoints, satisfying the open/simulated-only guardrail. It conforms to the canonical FusionCall ground-truth model from schema-003 and ships with a machine-readable manifest and provenance.",
+  "objective": "Simulate one EWSR1-FLI1 RNA-seq sample with an exact ground-truth breakpoint manifest, conforming to the schema-003 data model, ready for the smoke harness.",
+  "acceptanceCriteria": [
+    "One simulated EWSR1-FLI1 RNA-seq sample generated with reads and a machine-readable ground-truth manifest (genes, exact breakpoints, support counts).",
+    "Manifest conforms to the canonical ground-truth record from schema-003; license CC-BY-4.0/CC0 stated.",
+    "Generation method and seed recorded so the sample is reproducible; provenance recorded (no patient data).",
+    "Reviewed by bio-rev."
+  ],
+  "resources": [
+    "tasks/ewing-fdb-schema-003.json",
+    "PLAN.md (section 6.2)"
+  ],
+  "output": "data/sim/ewsr1-fli1-sample-001/ — simulated reads + ground-truth manifest + provenance.",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

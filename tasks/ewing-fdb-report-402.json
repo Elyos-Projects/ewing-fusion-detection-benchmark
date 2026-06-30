@@ -1,0 +1,30 @@
+{
+  "id": "ewing-fdb-report-402",
+  "title": "Results report v1.0 + expert sign-off log on all interpretive claims",
+  "project": "ewing-fusion-detection-benchmark",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer-research", "bioinformatics", "ewing-sarcoma", "documentation"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "M4 final results report v1.0 for the EWSR1-fusion detection benchmark. Every interpretive/biological claim carries a citation and an expert sign-off entry, 100% of numbers are provenanced, and the artefact states plainly it is not a diagnostic device and not medical advice. This honesty and expert-review gate is the project's core safeguard against misuse; the report is built on simulated/open data only.",
+  "objective": "Publish results report v1.0 with a complete expert sign-off log on every interpretive claim, a passing CI provenance audit, limitations + CIs throughout, and the not-a-diagnostic-device disclaimer.",
+  "acceptanceCriteria": [
+    "Every interpretive/biological claim carries a citation and an expert sign-off entry.",
+    "100% of numbers provenanced (CI audit passes); limitations + CIs throughout.",
+    "'Not a diagnostic device / not medical advice' on the artefact.",
+    "Reviewed by expert + maint."
+  ],
+  "resources": [
+    "tasks/ewing-fdb-robust-401.json",
+    "tasks/ewing-fdb-report-203.json"
+  ],
+  "output": "docs/reports/results-v1.0.md — results report v1.0 + expert sign-off log.",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "ewing-fdb-crosslink-605",
+  "title": "Integrate datasheets with ewing-open-data-catalog",
+  "project": "ewing-fusion-detection-benchmark",
+  "type": "data",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["cancer-research", "bioinformatics", "ewing-sarcoma", "data-integration"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "Backlog (unscheduled) integration task for the EWSR1-fusion detection benchmark. Cross-links this benchmark's datasheets and accession records with the sibling ewing-open-data-catalog project so the two inventories reuse one another rather than duplicating curation. Only open, licensed, accession-level metadata is shared; the open-data and compliance guardrails carry over (no controlled-access data).",
+  "objective": "Cross-link the benchmark datasheets and accession records with the ewing-open-data-catalog inventory so entries are mutually discoverable, sharing only open licensed metadata.",
+  "acceptanceCriteria": [
+    "Datasheets and accession records are linked to the corresponding ewing-open-data-catalog entries (stable identifiers both ways).",
+    "Only open, licensed, accession-level metadata is shared; no controlled-access or re-hosted data; provenance recorded.",
+    "Reviewed by maint."
+  ],
+  "resources": [
+    "tasks/ewing-fdb-datasheet-104.json",
+    "tasks/ewing-fdb-realdata-301.json"
+  ],
+  "output": "data/crosslink/ — cross-reference records linking benchmark datasheets to ewing-open-data-catalog entries.",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

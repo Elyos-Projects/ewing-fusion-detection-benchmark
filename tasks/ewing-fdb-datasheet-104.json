@@ -1,0 +1,29 @@
+{
+  "id": "ewing-fdb-datasheet-104",
+  "title": "Dataset datasheet for the simulated truth set (provenance, realism limits)",
+  "project": "ewing-fusion-detection-benchmark",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer-research", "bioinformatics", "ewing-sarcoma", "documentation", "data-governance"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "M1 datasheet for the simulated truth set of the EWSR1-fusion detection benchmark. Documents generation method, realism assumptions and limits, and states plainly that simulated performance does not equal clinical performance - a core honesty guardrail of the project. It records provenance and license so downstream users never mistake the simulated set for validated clinical data.",
+  "objective": "Write the dataset datasheet for the simulated truth set covering generation method, realism assumptions/limits, the explicit 'simulated != clinical performance' statement, sources, and license.",
+  "acceptanceCriteria": [
+    "Datasheet documents generation method, realism assumptions/limits, and an explicit 'simulated != clinical performance' statement.",
+    "Sources cited; license stated (CC-BY-4.0/CC0); provenance linked to the sim-101/sim-102 manifests.",
+    "Reviewed by expert + comp."
+  ],
+  "resources": [
+    "tasks/ewing-fdb-sim-102.json",
+    "tasks/ewing-fdb-sim-101.json"
+  ],
+  "output": "docs/datasheets/simulated-truthset.md — datasheet for the simulated truth set.",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "ewing-fdb-schema-003",
+  "title": "Define canonical FusionCall + ground-truth data model + match-rule spec v1",
+  "project": "ewing-fusion-detection-benchmark",
+  "type": "design-spec",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer-research", "bioinformatics", "ewing-sarcoma", "data-model", "reproducibility"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "M0 design-spec for the EWSR1-fusion detection benchmark. Every caller's heterogeneous output must normalise to one canonical FusionCall record, and ground truth plus the scoring match rule must be specified and versioned before any caller is wired in. This is the contract that makes cross-caller comparison fair and reproducible; it carries the open-data-only guardrail and emits no patient-facing claim.",
+  "objective": "Publish the canonical FusionCall record, the ground-truth manifest record, and match-rule spec v1 (versioned matchrule-v1) so callers, simulator, and scoring library all share one fair, unit-testable contract.",
+  "acceptanceCriteria": [
+    "Canonical FusionCall and ground-truth records specified (fields per PLAN section 6.2).",
+    "Match rule v1 published: gene-pair match + breakpoint tolerance (default +/-10 bp, parameterised) + partner-resolution scored separately.",
+    "Versioned (matchrule-v1) and unit-testable; reviewed by bio-rev + expert."
+  ],
+  "resources": [
+    "PLAN.md (section 6.2 canonical fusion-call data model)",
+    "tasks/ewing-fdb-repo-001.json"
+  ],
+  "output": "docs/data-model/fusioncall-and-matchrule-v1.md — canonical FusionCall + ground-truth schema and the versioned matchrule-v1 spec.",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "ewing-fdb-adoption-502",
+  "title": "Outreach + secure partner/steward; flip verifiedNeed; track outcomes O1-O7",
+  "project": "ewing-fusion-detection-benchmark",
+  "type": "research",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer-research", "bioinformatics", "ewing-sarcoma", "adoption", "community"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "M5 adoption task for the EWSR1-fusion detection benchmark. Conducts outreach to secure a real ES/methods partner or steward, flips verifiedNeed to true once a letter of intent is recorded, and stands up the public outcome ledger tracking O1-O7. Until a partner is secured every task carries verifiedNeed=false; this task is how that honesty flag is responsibly changed. No patient data involved (riskTier low).",
+  "objective": "Run outreach to secure a named partner/steward, record a letter of intent, flip verifiedNeed to true, and launch the live outcome ledger (O1-O7).",
+  "acceptanceCriteria": [
+    ">=1 real ES/methods group adopts or cites; partner/steward named; verifiedNeed flipped to true with a recorded letter of intent; outcome ledger live.",
+    "Outcome ledger (O1-O7: reproductions, citations, adoptions, contributor PRs) is public and updated.",
+    "Reviewed by maint."
+  ],
+  "resources": [
+    "PLAN.md (sections 2, 4, 11)",
+    "tasks/ewing-fdb-report-402.json"
+  ],
+  "output": "docs/adoption-outcomes.md — partner/steward record, letter-of-intent reference, and live O1-O7 outcome ledger.",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

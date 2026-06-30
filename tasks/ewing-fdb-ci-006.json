@@ -1,0 +1,30 @@
+{
+  "id": "ewing-fdb-ci-006",
+  "title": "CI: smoke benchmark on every PR + license/provenance gate",
+  "project": "ewing-fusion-detection-benchmark",
+  "type": "code",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer-research", "bioinformatics", "ewing-sarcoma", "ci", "compliance"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "M0 continuous-integration scaffolding for the EWSR1-fusion detection benchmark. CI runs the smoke benchmark on every PR and enforces the license/provenance gate that references the compliance-002 policy, so no controlled-access or flagged data and no unprovenanced result can land. This is pure infrastructure (riskTier low) and touches no patient data.",
+  "objective": "Add CI that runs the smoke harness on every PR and a license/provenance gate that blocks merges lacking provenance or violating the compliance policy.",
+  "acceptanceCriteria": [
+    "CI runs the smoke benchmark (harness-005) on every PR and fails on regression.",
+    "License/provenance gate references docs/COMPLIANCE.md and blocks controlled-access/flagged data and unprovenanced results.",
+    "Pinned container digests and references are verified in CI; no secrets are exposed in logs.",
+    "Reviewed by maint."
+  ],
+  "resources": [
+    "tasks/ewing-fdb-harness-005.json",
+    "tasks/ewing-fdb-compliance-002.json"
+  ],
+  "output": "A pull request adding .github/workflows/ci.yml (smoke benchmark) and the license/provenance gate.",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

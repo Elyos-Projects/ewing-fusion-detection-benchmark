@@ -1,0 +1,29 @@
+{
+  "id": "ewing-fdb-longread-601",
+  "title": "Long-read (ONT/PacBio) simulated fusion track",
+  "project": "ewing-fusion-detection-benchmark",
+  "type": "data",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["cancer-research", "bioinformatics", "ewing-sarcoma", "data-simulation", "long-read"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "Backlog (unscheduled) extension for the EWSR1-fusion detection benchmark. Adds a long-read (ONT/PacBio) simulated fusion track once a long-read simulator and caller adapters are available. All data is simulated and CC-licensed per the open-data guardrail; this expands the benchmark's modality coverage beyond short-read RNA-seq. Scheduling depends on simulator/adapter availability.",
+  "objective": "Generate a long-read (ONT/PacBio) simulated fusion track with ground-truth manifests, conforming to the canonical data model, once a long-read simulator and caller adapters exist.",
+  "acceptanceCriteria": [
+    "Long-read simulated cases generated with per-case ground-truth manifests conforming to schema-003; license CC-BY-4.0/CC0; provenance recorded.",
+    "Documents the long-read simulator used and its realism assumptions/limits.",
+    "Reviewed by bio-rev + expert."
+  ],
+  "resources": [
+    "tasks/ewing-fdb-schema-003.json",
+    "tasks/ewing-fdb-sim-102.json"
+  ],
+  "output": "data/sim/longread-track/ — simulated ONT/PacBio fusion cases + ground-truth manifests.",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

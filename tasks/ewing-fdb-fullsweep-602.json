@@ -1,0 +1,32 @@
+{
+  "id": "ewing-fdb-fullsweep-602",
+  "title": "Funded-lane full parameter sweep (heavy compute, hard budget cap)",
+  "project": "ewing-fusion-detection-benchmark",
+  "type": "code",
+  "lane": "funded",
+  "priority": "low",
+  "domain": ["cancer-research", "bioinformatics", "ewing-sarcoma", "benchmarking", "compute"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "Backlog (unscheduled) funded-lane task for the EWSR1-fusion detection benchmark. Heavy full parameter-sweep compute may exceed donated capacity, so this runs in the funded lane against escrow with a hard per-task budget cap that must never be exceeded, plus a public cost ledger (PLAN section 15, CLAUDE.md). It operates on simulated/open data only and emits a provenance-bound sweep dataset.",
+  "objective": "Run the full caller parameter sweep over the simulated truth set in the funded lane under a hard budget cap, emitting a provenance-bound results dataset and a public cost ledger entry.",
+  "acceptanceCriteria": [
+    "Full parameter sweep runs reproducibly with complete per-cell provenance over simulated/open data only.",
+    "Spend never exceeds fundedBudgetUsd; a public cost ledger entry records actual spend against the cap.",
+    "No secrets/API keys written to logs, receipts, or committed files.",
+    "Reviewed by bio-rev + maint."
+  ],
+  "resources": [
+    "PLAN.md (section 15)",
+    "tasks/ewing-fdb-harness-202.json",
+    "C:/code/elyos/CLAUDE.md"
+  ],
+  "output": "data/sweep/fullsweep-results/ — provenance-bound full parameter-sweep results dataset + cost ledger entry.",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0",
+  "fundedBudgetUsd": 500
+}

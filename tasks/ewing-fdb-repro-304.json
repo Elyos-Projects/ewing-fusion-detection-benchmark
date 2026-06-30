@@ -1,0 +1,28 @@
+{
+  "id": "ewing-fdb-repro-304",
+  "title": "External-reproduction guide + verify >=1 independent re-run",
+  "project": "ewing-fusion-detection-benchmark",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer-research", "bioinformatics", "ewing-sarcoma", "reproducibility", "documentation"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "M3 reproducibility verification for the EWSR1-fusion detection benchmark. Provides a step-by-step external re-run guide and confirms at least one independent party reproduces a matching run within documented tolerance. Independent reproduction is a primary success outcome (O-series) and the strongest evidence the benchmark is trustworthy. Operates on open/simulated inputs only.",
+  "objective": "Write the external-reproduction guide and verify >=1 independent re-run matches within documented tolerance, logging any discrepancies.",
+  "acceptanceCriteria": [
+    "Step-by-step external re-run guide; >=1 independent party confirms a matching run (within documented tolerance); discrepancies logged.",
+    "Guide references pinned container digests, reference build, and provenance so a third party can reproduce from scratch.",
+    "Reviewed by maint."
+  ],
+  "resources": [
+    "tasks/ewing-fdb-harness-202.json"
+  ],
+  "output": "docs/reproduction-guide.md — external-reproduction guide + independent re-run verification log.",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

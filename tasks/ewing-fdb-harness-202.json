@@ -1,0 +1,30 @@
+{
+  "id": "ewing-fdb-harness-202",
+  "title": "Full Nextflow/Snakemake DAG: all samples x all callers to normalised to scored to aggregated",
+  "project": "ewing-fusion-detection-benchmark",
+  "type": "code",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer-research", "bioinformatics", "ewing-sarcoma", "workflow", "reproducibility"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "M2 full benchmark harness for the EWSR1-fusion detection benchmark. Implements the reproducible Nextflow/Snakemake DAG running all simulated samples through all callers, normalising, scoring, and aggregating with complete per-cell provenance. One-command reproducibility and a maintainer-verified re-run are the integrity guarantees; resource usage is captured per caller. No patient data is touched.",
+  "objective": "Build the full workflow DAG (all samples x all callers -> FusionCall -> scored -> aggregated) that runs reproducibly via one command with complete provenance and resource capture.",
+  "acceptanceCriteria": [
+    "Full simulated benchmark runs reproducibly via one command; provenance complete for every cell; maintainer re-run matches.",
+    "Resource usage (runtime, peak memory) captured per caller per sample.",
+    "Reviewed by bio-rev + maint."
+  ],
+  "resources": [
+    "tasks/ewing-fdb-callers-201.json",
+    "tasks/ewing-fdb-score-103.json",
+    "tasks/ewing-fdb-sim-102.json"
+  ],
+  "output": "A pull request adding the full Nextflow/Snakemake workflow (workflow/) producing aggregated, provenance-bound scored results.",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}
