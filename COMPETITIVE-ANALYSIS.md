@@ -283,7 +283,7 @@ themselves (each ships self-favoring benchmarks), and (c) commercial reference s
 
 ## 7. Parallel & perpendicular spin-offs
 
-- **Tight ties to sibling Elyos projects:** `ewing-open-data-catalog` should *own* the accession +
+- **Tight ties to sibling Hee-Lee Oss projects:** `ewing-open-data-catalog` should *own* the accession +
   license + datasheet inventory the benchmark consumes (reuse, don't duplicate); `ewing-expression-
   reanalysis` and `ewing-single-cell-atlas` can consume the same curated open RNA-seq accessions and
   the validated alignment containers — share the compliance/provenance tooling across all three.

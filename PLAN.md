@@ -208,9 +208,9 @@ for docs/datasheets; data under the most permissive license compatible with each
 7. **`provenance/` — Ledger.** A signed, append-only manifest binding each reported number to
    (input hash, container digest, params, harness commit). CI fails if any number lacks lineage.
 
-> **Agent-neutral / Elyos-fit note:** this project is delivered as a standalone open repo of
-> data + workflow + docs. It does not modify the Elyos core. Caller-specific logic lives behind
-> the uniform `callers/` adapter (mirroring Elyos's `adapters/` rule), keeping the harness
+> **Agent-neutral / Hee-Lee Oss-fit note:** this project is delivered as a standalone open repo of
+> data + workflow + docs. It does not modify the Hee-Lee Oss core. Caller-specific logic lives behind
+> the uniform `callers/` adapter (mirroring Hee-Lee Oss's `adapters/` rule), keeping the harness
 > vendor-neutral.
 
 ### 6.2 Canonical fusion-call data model (normalised)
@@ -250,7 +250,7 @@ Ground-truth records share the same shape (minus `callerScore`), enabling a clea
   required fields in the report; no point estimate ships without them.
 
 ### 6.4 Workflow / tooling
-- **Languages:** TypeScript/ESM for the scoring core and tooling (per Elyos conventions); Python
+- **Languages:** TypeScript/ESM for the scoring core and tooling (per Hee-Lee Oss conventions); Python
   permitted inside caller adapters and the simulator where the ecosystem requires it.
 - **Workflow manager:** Nextflow (nf-core style) preferred for portability; Snakemake fallback.
 - **Containers:** Docker for dev, Singularity/Apptainer for HPC.
@@ -374,7 +374,7 @@ and **gates** the `verifiedNeed` flag flipping to true and any high-risk patient
 ## 10. Work breakdown
 
 The itemised, schema-mapped backlog lives in **`TASKS.md`**, organised by the M0–M5 milestones
-above. Each task maps to an Elyos Task JSON (§ schema), carries acceptance criteria and a
+above. Each task maps to a Hee-Lee Oss Task JSON (§ schema), carries acceptance criteria and a
 Definition of Done, and is sized (`small`/`medium`/`large`). TASKS.md includes a complete,
 schema-valid example Task JSON for the first M0 task, milestone tables
 (`ID | Title | Type | Size | Risk | Deliverable | Depends on | Reviewer`), and a backlog of
@@ -396,7 +396,7 @@ secured (§2, §11).
 | **Partner / requestor** | TO BE SECURED | Confirms the need; adopts/stewards output; flips `verifiedNeed` to true |
 | **Compliance reviewer** | Maintainer + reviewer | Enforces §7 data/license/PII gates on every PR |
 
-Governance follows Elyos rules: COI + veto checklist for edge cases; changes to scope/guardrails
+Governance follows Hee-Lee Oss rules: COI + veto checklist for edge cases; changes to scope/guardrails
 go through documented governance. **No high-risk artefact ships without credentialed sign-off.**
 
 ---
@@ -410,10 +410,10 @@ go through documented governance. **No high-risk artefact ships without credenti
   BadRead/pbsim); structural-variant callers (Manta/GRIDSS/SvABA, secondary track).
 - **Infrastructure:** Nextflow/Snakemake; Docker + Singularity/Apptainer; GitHub Actions; Zenodo
   (DOI/archival); an HPC or sufficiently large donated-compute environment for full runs.
-- **Upstream/related Elyos projects:** `ewing-open-data-catalog` (shares dataset inventory +
+- **Upstream/related Hee-Lee Oss projects:** `ewing-open-data-catalog` (shares dataset inventory +
   datasheets), `ewsr1-fli1-knowledge-graph` (biological grounding), `cancer-dataset-datasheets`
   (datasheet templates), `ml-oncology-benchmarks` (benchmarking conventions). Reuse, don't fork.
-- **Elyos pieces:** Task schema (`packages/schema`), the donated-lane workflow (CLI prepares
+- **Hee-Lee Oss pieces:** Task schema (`packages/schema`), the donated-lane workflow (CLI prepares
   workspace, human runs agent, PRs opened), governance/review process.
 
 ---
@@ -492,10 +492,10 @@ go through documented governance. **No high-risk artefact ships without credenti
 
 ## 17. References
 
-- Elyos work rules — `C:\code\elyos\CLAUDE.md`
-- Good Deed Definition (criteria + risk tiers) — `C:\code\elyos\docs\good-deed-definition.md`
-- Task JSON schema — `C:\code\elyos\packages\schema\src\schemas.ts`
-- Portfolio roadmap (Track 8 cancer guardrails) — `C:\code\elyos\planning\ROADMAP.md`
+- Hee-Lee Oss work rules — `C:\code\hee-lee-oss\CLAUDE.md`
+- Good Deed Definition (criteria + risk tiers) — `C:\code\hee-lee-oss\docs\good-deed-definition.md`
+- Task JSON schema — `C:\code\hee-lee-oss\packages\schema\src\schemas.ts`
+- Portfolio roadmap (Track 8 cancer guardrails) — `C:\code\hee-lee-oss\planning\ROADMAP.md`
 - Planning spec — `scratchpad/PLAN_SPEC.md`
 - Depth exemplar — `C:\code\Ofelia\plan.md`
 - Domain background (to cite precisely per-claim in artefacts, not asserted here): WHO
@@ -552,11 +552,11 @@ to the plan above (and to TASKS.md). Each is concrete and reflected in the docum
     reproducibility is the actual public good, so it must be a hard gate, not a hope.
 19. **Added a tiered run strategy (smoke vs full)** in CI and §6.4 / risk table to keep PRs fast
     and bound compute cost; added a funded-lane-with-hard-cap fallback for heavy sweeps (§15).
-20. **Kept caller-specific logic behind a uniform adapter** (§6.1 #3, §6.3) mirroring Elyos's
+20. **Kept caller-specific logic behind a uniform adapter** (§6.1 #3, §6.3) mirroring Hee-Lee Oss's
     `adapters/` rule, so the harness stays vendor-neutral and "add-a-caller" is cheap.
 21. **Added a contributor "add/update a caller" path** as an M5 exit gate proven by an external
     PR (§9), making community maintenance real rather than aspirational.
-22. **Cross-linked sibling Elyos projects** (`ewing-open-data-catalog`,
+22. **Cross-linked sibling Hee-Lee Oss projects** (`ewing-open-data-catalog`,
     `ewsr1-fli1-knowledge-graph`, `cancer-dataset-datasheets`, `ml-oncology-benchmarks`) to reuse
     datasheets/inventory and avoid duplicated effort (§12).
 23. **Added DNA structural-variant calling as an explicitly *secondary, conditional* track**
@@ -595,7 +595,7 @@ guardrails, and the Task schema; internal consistency between PLAN.md and TASKS.
 - Provenance required on every assertion and number; CI-enforced. ✓
 - Honest posture: `verifiedNeed:false`, partner/steward TO BE SECURED, anti-metric, mandatory
   limitations. ✓
-- Elyos engineering conventions (TS/ESM, pnpm, MIT code / CC-BY docs, donated lane, DCO) honoured;
+- Hee-Lee Oss engineering conventions (TS/ESM, pnpm, MIT code / CC-BY docs, donated lane, DCO) honoured;
   funded-lane fallback carries a hard budget cap. ✓
 
 **Fixes applied during review**

@@ -22,7 +22,7 @@
   "resources": [
     "PLAN.md (section 15)",
     "tasks/ewing-fdb-harness-202.json",
-    "C:/code/elyos/CLAUDE.md"
+    "C:/code/hee-lee-oss/CLAUDE.md"
   ],
   "output": "data/sweep/fullsweep-results/ — provenance-bound full parameter-sweep results dataset + cost ledger entry.",
   "requestor": "TBD",

@@ -21,9 +21,9 @@
     "Reviewed and signed off by the maintainer and the compliance reviewer."
   ],
   "resources": [
-    "C:/code/elyos/CLAUDE.md",
-    "C:/code/elyos/docs/good-deed-definition.md",
-    "C:/code/elyos/planning/ROADMAP.md (Track 8 cancer guardrails)",
+    "C:/code/hee-lee-oss/CLAUDE.md",
+    "C:/code/hee-lee-oss/docs/good-deed-definition.md",
+    "C:/code/hee-lee-oss/planning/ROADMAP.md (Track 8 cancer guardrails)",
     "PLAN.md (sections 7 and 8)"
   ],
   "output": "A pull request adding the repository skeleton: MIT + CC-BY-4.0 licenses, README, CONTRIBUTING.md, CITATION.cff stub, and compliance README encoding the cancer data guardrails.",

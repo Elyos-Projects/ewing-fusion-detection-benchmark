@@ -21,7 +21,7 @@
   ],
   "resources": [
     "PLAN.md (sections 7 and 8)",
-    "C:/code/elyos/CLAUDE.md",
+    "C:/code/hee-lee-oss/CLAUDE.md",
     "tasks/ewing-fdb-repo-001.json"
   ],
   "output": "docs/COMPLIANCE.md — the data-source compliance policy referenced by the CI license/provenance gate.",

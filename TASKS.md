@@ -10,9 +10,9 @@ with a hard budget cap) · **Companion:** see `PLAN.md` for the 17-section proje
 
 ---
 
-## How these tasks map to Elyos
+## How these tasks map to Hee-Lee Oss
 
-Each task below becomes an Elyos **Task JSON** validated against
+Each task below becomes a Hee-Lee Oss **Task JSON** validated against
 `packages/schema/src/schemas.ts`. Field mapping:
 
 - **`id`** — stable slug `ewing-fdb-<area>-NNN`.
@@ -273,9 +273,9 @@ with documented rationale; maintenance plan ratified.
     "Reviewed and signed off by the maintainer and the compliance reviewer."
   ],
   "resources": [
-    "C:/code/elyos/CLAUDE.md",
-    "C:/code/elyos/docs/good-deed-definition.md",
-    "C:/code/elyos/planning/ROADMAP.md (Track 8 cancer guardrails)",
+    "C:/code/hee-lee-oss/CLAUDE.md",
+    "C:/code/hee-lee-oss/docs/good-deed-definition.md",
+    "C:/code/hee-lee-oss/planning/ROADMAP.md (Track 8 cancer guardrails)",
     "PLAN.md (sections 7 and 8)"
   ],
   "output": "A pull request adding the repository skeleton: MIT + CC-BY-4.0 licenses, README, CONTRIBUTING.md, CITATION.cff stub, and compliance README encoding the cancer data guardrails.",
@@ -347,7 +347,7 @@ task decomposition and are mirrored verbatim in each row's `tasks/<id>.json`.
 ## Generated task index
 
 Each milestone/backlog row maps to exactly one executable `tasks/<id>.json` (validated against the
-Elyos taskSchema). **Fan-out:** none — one JSON per enumerated row. Named sets that appear inside a
+Hee-Lee Oss taskSchema). **Fan-out:** none — one JSON per enumerated row. Named sets that appear inside a
 single row (the five ES partners FLI1/ERG/ETV1/ETV4/FEV in `sim-101`; the six callers in
 `callers-201`; the per-caller tool cards in `toolcards-204`) are **single integrated deliverables**
 per their own acceptance criteria, not repeatable templates, so they are intentionally **not**
