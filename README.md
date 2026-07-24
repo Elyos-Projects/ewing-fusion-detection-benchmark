@@ -6,7 +6,7 @@ ewing-fusion-detection-benchmark
 
 **Definition of shipped:** A deed is *shipped* (not merely merged) when: acceptance criteria met **and** CI green **and** the artefact is independently re-runnable from pinned inputs **and** required reviewer/expert sign-off recorded **and** provenance complete **and** the output is published in the open r
 
-This is an **Hee-Lee Oss** good-deed project. Contributors pull a task, do it with their own coding agent, and open a PR. Platform: https://github.com/jdev1977/hee-lee-oss
+This is a **Hee-Lee Oss** good-deed project. Contributors pull a task, do it with their own coding agent, and open a PR. Get started: https://github.com/Hee-Lee-Oss-Projects/hee-lee-oss-downloads
 
 ## Plan
 - [PLAN.md](./PLAN.md) — robust enterprise plan (vision, architecture, roadmap, risks; includes an applied-improvements appendix + review sign-off)
